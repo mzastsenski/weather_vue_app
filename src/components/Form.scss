@@ -1,0 +1,31 @@
+.form {
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+  align-self: center;
+  height: 32px;
+  gap: 10px;
+  margin-top: 12px;
+  margin-bottom: 18px;
+}
+.form input {
+  padding: 12px;
+  width: 190px;
+  border-radius: 9px;
+  border: 1px grey solid;
+  font-size: 14px;
+}
+.form button {
+  color: white;
+  background-color: rgb(19, 140, 19);
+  border: none;
+  border-radius: 8px;
+  padding: 0 21px;
+  font-size: 12px;
+}
+
+@media screen and (max-width: 550px) {
+  .form {
+    grid-template-columns: 120px 120px 70px;
+  }
+}
