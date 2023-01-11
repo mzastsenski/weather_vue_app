@@ -37,15 +37,6 @@ watch(citys, (newData) => {
 
 <template>
   <div class="app">
-    <!-- <div class="vuex">
-      <h2>{{ $store.state.count }}</h2>
-      <h3>{{ $store.state.a.count }}</h3>
-      <h3>{{ $store.state.b.count }}</h3>
-      <button @click="$store.commit('plus')">Plus</button>
-      <button @click="$store.commit('plus', 2)">Plus 2</button>
-      <button @click="$store.commit('minus')">Minus</button>
-      <button @click="$store.commit('reset')">Reset</button>
-    </div> -->
     <CityInfo :data="data" :show="show" :setShow="setShow" />
     <div v-if="show" class="overlay"></div>
     <h1>Mikalai's Weather Vue-App</h1>

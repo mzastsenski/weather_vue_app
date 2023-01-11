@@ -12,7 +12,7 @@
     font-weight: 400;
     position: relative;
     font-size: 20px;
-    margin: 10px 0 12px;
+    margin: 7px 0;
     span {
       background-color: orange;
       padding: 3px 8px;
@@ -30,7 +30,7 @@
     font-size: 46px;
     font-family: serif;
     position: relative;
-    margin: 1px 0 12px;
+    margin: 6px 0;
     text-align: left;
     span {
       padding-left: 4px;
@@ -71,7 +71,7 @@
 @media screen and (max-width: 550px) {
   .City {
     width: 162px;
-    height: 255px;
+    height: 265px;
     padding: 24px;
     h1 {
       font-size: 32px;
