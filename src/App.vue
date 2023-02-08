@@ -39,7 +39,7 @@ watch(citys, (newData) => {
   <div class="app">
     <CityInfo :data="data" :show="show" :setShow="setShow" />
     <div v-if="show" class="overlay"></div>
-    <h1>Mikalai's Weather Vue-App</h1>
+    <h1>Weather Vue-App</h1>
     <FormComponent
       :addCity="addCity"
       @response="(e) => addCity(e)"
