@@ -1,8 +1,8 @@
 <script setup>
 import "./CityInfo.scss";
-import { getDay, getShortCountry } from "../helpers";
+import { getDay, getShortCountry } from "../../helpers";
 import { ref, watch } from "vue";
-import { getCity2 } from "../requests";
+import { getCity2 } from "../../requests";
 
 const props = defineProps(["data", "show", "setShow"]);
 

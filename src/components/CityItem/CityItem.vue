@@ -1,7 +1,7 @@
 <script setup>
 import "./CityItem.scss";
-import { getCity } from "../requests";
-import { getShortCountry } from "../helpers";
+import { getCity } from "../../requests";
+import { getShortCountry } from "../../helpers";
 import { ref, watch } from "vue";
 
 const props = defineProps(["city", "cityCallback", "idx", "deleteCity"]);

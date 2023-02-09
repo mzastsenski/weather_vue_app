@@ -1,8 +1,8 @@
 <script setup>
 import "./App.scss";
-import CityItem from "./components/CityItem.vue";
-import CityInfo from "./components/CityInfo.vue";
-import FormComponent from "./components/FormComponent.vue";
+import CityItem from "./components/Cityitem/CityItem.vue";
+import CityInfo from "./components/CityInfo/CityInfo.vue";
+import FormComponent from "./components/Form/FormComponent.vue";
 import { ref, watch, onMounted } from "vue";
 
 const citys = ref([]);
