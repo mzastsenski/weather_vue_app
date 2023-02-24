@@ -1,5 +1,5 @@
 <script setup>
-import "./CityItem.scss";
+import s from "./CityItem.module.scss";
 import { getCity } from "../../requests";
 import { getShortCountry } from "../../helpers";
 import { ref, watch } from "vue";
@@ -20,7 +20,7 @@ getCity(props.city, setData);
 </script>
 
 <template>
-  <div v-if="data.location" class="City" @click="cityCallback(data)">
+  <div v-if="data.location" :class="s.city" @click="cityCallback(data)">
     <h4>
       {{ data.location.name }}
       <span> {{ getShortCountry(data.location.country) }}</span>
@@ -28,6 +28,6 @@ getCity(props.city, setData);
     <h1>{{ data.current.temp_c }} <span> °C</span></h1>
     <img :src="data.current.condition.icon" alt="" />
     <p>{{ data.current.condition.text }}</p>
-    <button class="delete_button" @click.stop="deleteCity(idx)">X</button>
+    <button :class="s.delete_button" @click.stop="deleteCity(idx)">X</button>
   </div>
 </template>

@@ -1,18 +1,16 @@
 <script setup>
 import "./App.scss";
-import CityItem from "./components/Cityitem/CityItem.vue";
+import CityItem from "./components/CityItem/CityItem.vue";
 import CityInfo from "./components/CityInfo/CityInfo.vue";
 import FormComponent from "./components/Form/FormComponent.vue";
 import { ref, watch, onMounted } from "vue";
 
 const citys = ref([]);
 const addCity = (e) => {
-  citys.value.push(e);
-  citys.value = [...citys.value];
+  citys.value = [...citys.value, e];
 };
 const deleteCity = (idx) => {
-  const newData = citys.value.filter((e, i) => i !== idx);
-  citys.value = [...newData];
+  citys.value = citys.value.filter((_, i) => i !== idx);
 };
 
 const show = ref(false);
@@ -27,7 +25,7 @@ const cityCallback = (citydata) => {
 onMounted(() => {
   const res = JSON.parse(localStorage.getItem("citys"));
   if (res && res.length) citys.value = res;
-  else citys.value = ["Frankfurt", "Minsk"];
+  else citys.value = ["Frankfurt", "Berlin"];
 });
 
 watch(citys, (newData) => {

@@ -1,5 +1,5 @@
 <script setup>
-import "./CityInfo.scss";
+import s from "./CityInfo.module.scss";
 import { getDay, getShortCountry } from "../../helpers";
 import { ref, watch } from "vue";
 import { getCity2 } from "../../requests";
@@ -19,7 +19,7 @@ watch(props, () => {
 
 <template>
   <div :class="show ? 'info show' : 'info'" @click="setShow">
-    <div v-if="data.location && show" class="CityInfo" @click="setShow">
+    <div v-if="data.location && show" :class="s.city_info" @click="setShow">
       <h4>
         {{ data.location.name }}
         <span> {{ getShortCountry(data.location.country) }}</span>
@@ -39,7 +39,7 @@ watch(props, () => {
         <p>Sunset: {{ data2.current_observation.astronomy.sunset }}</p>
       </div>
       <p>---</p>
-      <div v-if="data2.location" className="forecasts">
+      <div v-if="data2.location">
         <p>
           Tomorow: {{ data2.forecasts[1].high }} °C
           {{ data2.forecasts[1].text }}
