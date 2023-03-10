@@ -65,10 +65,13 @@
     font-size: 11px;
     transition: 0.25s;
   }
+  .delete_button:hover {
+    transform: scale(1.12);
+  }
 }
 
 @media screen and (max-width: 550px) {
-  .City {
+  .city {
     width: 162px;
     height: 265px;
     padding: 24px;
