@@ -8,7 +8,8 @@ const city = ref("");
 
 const newCity = () => {
   if (city.value) props.addCity(city.value);
-  // emit("response", city.value);
+  // if (city.value) emit("response", city.value);
+  city.value = "";
 };
 </script>
 
